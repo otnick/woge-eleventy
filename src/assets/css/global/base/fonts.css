@@ -45,7 +45,7 @@
   font-weight: 400;
   src:
     local(''),
-    url('/assets/fonts/garpwarp/Garpwarp-Regular.otf') format('otf');
+    url('/assets/fonts/garpwarp/Garpwarp-Regular.otf') format('opentype');
 }
 
 @font-face {
@@ -55,7 +55,7 @@
   font-weight: 700;
   src:
     local(''),
-    url('/assets/fonts/garpwarp/Garpwarp-Regular.otf') format('otf');
+    url('/assets/fonts/garpwarp/Garpwarp-Regular.otf') format('opentype');
 }
 
 @font-face {
@@ -65,5 +65,45 @@
   font-weight: 900;
   src:
     local(''),
-    url('/assets/fonts/garpwarp/Garpwarp-Warped.otf') format('otf');
+    url('/assets/fonts/garpwarp/Garpwarp-Warped.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local(''),
+    url('/assets/fonts/Rubik/Rubik-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local(''),
+    url('/assets/fonts/Rubik/Rubik-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local(''),
+    url('/assets/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local(''),
+    url('/assets/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf') format('truetype');
 }

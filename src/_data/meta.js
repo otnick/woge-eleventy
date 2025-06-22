@@ -9,7 +9,7 @@ export const lang = 'de';
 export const skipContent = 'Skip to content';
 export const author = {
   name: 'Woge e.V.', // i.e. Lene Saile - page / blog author's name. Must be set.
-  avatar: '/icon-512x512.png', // path to the author's avatar. In this case just using a favicon.
+  avatar: '/WOGE_eV_Signet_rgb.svg', // path to the author's avatar. In this case just using a favicon.
   email: 'hola@lenesaile.com', // i.e. hola@lenesaile.com - email of the author
   website: 'https://www.lenesaile.com', // i.e. https.://www.lenesaile.com - the personal site of the author
   fediverse: '@lene@front-end.social' // used for highlighting journalism on the fediverse. Can be Mastodon, Flipboard, Threads, WordPress (with the ActivityPub plugin installed), PeerTube, Pixelfed, etc. https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/
