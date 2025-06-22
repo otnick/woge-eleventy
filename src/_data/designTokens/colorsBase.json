@@ -20,7 +20,19 @@
     {
       "name": "Gold",
       "value": "#fbbe25"
-    }
+    },
+    {
+      "name": "Woge Primary",
+      "value": "#a01c6c"
+    },
+    {
+      "name": "Woge Secondary",
+      "value": "#87b9b4"
+    },
+    {
+      "name": "Woge Digital",
+      "value": "#ffa00a"
+    }      
   ],
   "standalone": []
 }

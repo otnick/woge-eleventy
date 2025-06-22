@@ -1,16 +1,20 @@
 export default {
   top: [
     {
-      text: 'About',
+      text: 'Über uns',
       url: '/about/'
     },
     {
-      text: 'Docs',
-      url: '/get-started/'
+      text: 'Spenden',
+      url: '/spenden/'
     },
     {
-      text: 'Built with',
-      url: '/built-with/'
+      text: 'Die Woge Wohngemeinschaft',
+      url: '/presse/'
+    },
+    {
+      text: 'Kontakt',
+      url: '/imprint/'
     },
     {
       text: 'Blog',
@@ -19,16 +23,8 @@ export default {
   ],
   bottom: [
     {
-      text: 'Style guide',
-      url: '/styleguide/'
-    },
-    {
-      text: 'Imprint',
+      text: 'Impressum',
       url: '/imprint/'
     },
-    {
-      text: 'Privacy',
-      url: '/privacy/'
-    }
   ]
 };

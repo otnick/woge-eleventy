@@ -1,11 +1,8 @@
 email: hola@somemail.com
 address: |-
-  Organization name
-  Your street
-  12345, city
-  Tel: +34 928231911
+  Woge Wohngemeinschaft
+  Gastfeldstraße 26G
+  28201 Bremen
+  Tel: 0421 9597026
 platforms:
-  github: 'https://github.com/madrilene/eleventy-excellent'
-  mastodon: 'https://front-end.social/@lene'
-  bluesky: 'https://bsky.app/profile/lenesaile.com'
-  kofi: 'https://ko-fi.com/lenesaile'
+  instagram: 'Füller'

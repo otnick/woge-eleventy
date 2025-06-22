@@ -61,6 +61,30 @@
     {
       "name": "Gold Subdued",
       "value": "#f1c15b"
+    },
+    {
+      "name": "Woge Primary",
+      "value": "#a01c6c"
+    },
+    {
+      "name": "Woge Primary Subdued",
+      "value": "#d296be"
+    },
+    {
+      "name": "Woge Secondary",
+      "value": "#87b9b4"
+    },
+    {
+      "name": "Woge Secondary Subdued",
+      "value": "#3c6464"
+    },
+    {
+      "name": "Woge Digital",
+      "value": "#ffa00a"
+    },
+    {
+      "name": "Woge Digital Subdued",
+      "value": "#ffd287"
     }
   ]
 }

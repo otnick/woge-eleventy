@@ -37,3 +37,33 @@
     local(''),
     url('/assets/fonts/redhat/red-hat-display-v7-latin-900.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'Garpwarp';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local(''),
+    url('/assets/fonts/garpwarp/Garpwarp-Regular.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Garpwarp';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local(''),
+    url('/assets/fonts/garpwarp/Garpwarp-Regular.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Garpwarp Warped';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src:
+    local(''),
+    url('/assets/fonts/garpwarp/Garpwarp-Warped.otf') format('otf');
+}

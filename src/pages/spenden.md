@@ -1,6 +1,6 @@
 ---
-title: Was wir machen
-permalink: /about/index.html
+title: Spenden
+permalink: /spenden/index.html
 description: 'Eleventy Excellent is inspired bythe companion website of Andy Bell’s talk "Be the browser’s mentor, not its micromanager".'
 layout: page
 ---
