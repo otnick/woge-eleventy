@@ -2,41 +2,121 @@
 layout: base
 permalink: /index.html
 title: 'WOGE e.V.'
-description: 'Eleventy starter using modern CSS, fluid type, fluid spacing, flexible layout and progressive enhancement.'
-blog:
-  title: 'Blog'
-  intro: "I'm showing the last 4 blog posts, but there might be more!"
+description: 'Das menschliche Herz wird nicht dement – WOGE e.V.'
 ---
 
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .site-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .site-info img {
+    width: 220px;
+    height: auto;
+  }
+
+  .site-info p {
+    margin: 0;
+  }
+
+  .site-info .address {
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  .address-header {
+    color: var(--color-primary);
+  }
+
+  .headline {
+    flex: 1;
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: #6bb6b0;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+    text-align: right;
+  }
+
+  .person-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .person {
+    padding: 1.2rem;
+    border-radius: 8px;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  .person.annette { background-color: #cbe5ee; }
+  .person.udo { background-color: #e9d5eb; }
+  .person.barbara { background-color: #fbe3b5; }
+  .person.dorle { background-color: #d9cee2; }
+
+  .spenden-button {
+    position: fixed;
+    right: 3rem;
+    bottom: 2rem;
+    background-color: #fbbf24;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+    font-size: 0.9rem;
+  }
+</style>
+
 <div class="wrapper">
-  <header class="full | section" style="--spot-color: var(--color-primary)">
-    <div class="section__inner flow region">
-      <h1 class="text-center" style="color: var(--color-light);">{{ title }}</h1>
+  <header class="header">
+    <div class="site-info">
+      <img src="{{ '/assets/svg/woge_logo.svg' }}" alt="WOGE e.V. Logo">
+      <p class="address-header"><strong>WOGE e.V.</strong></p>
+      <p class="address">Gastfeldstr. 26g<br>28201 Bremen</p>
     </div>
-    {% svg "divider/waves", null, "divider" %}
+
+    <h1 class="headline">Das menschliche Herz<br>wird nicht dement</h1>
   </header>
 
-  <article class="full | region">
-    <div class="wrapper flow prose">
-      <h2 id="an-eleventy-starter">Das menschliche Herz wird nicht dement</h2>
+  <div class="person-grid">
+    <div class="person annette">
+      <strong>Annette</strong><br>
+      Annette war eine engagierte Lehrerin und übersetzte in ihrer Freizeit niederländische Kirchtexte.
     </div>
-  </article>
+    <div class="person udo">
+      <strong>Udo</strong><br>
+      Udo war in seinem Job als Sozialarbeiter immer am Puls der Zeit und diskutierte viel und gerne.
+    </div>
+    <div class="person barbara">
+      <strong>Barbara</strong><br>
+      Barbara arbeitete in einem Frauenprojekt und liebte die Blühwiesen und den meditativen Kreis­tanz.
+    </div>
+    <div class="person dorle">
+      <strong>Dorle</strong><br>
+      Dorle engagierte sich in der evangelischen Kirchengemeinde und sang mit Freude im Chor.
+    </div>
+  </div>
 
-  <section class="full | region">
-    <div class="wrapper flow prose">
-      <h2>{{ blog.title }}</h2>
-      {% if blog.intro %}
-        <p>{{ blog.intro }}</p>
-      {% endif %}
-      <div class="feature |  region region-space-l">
-        <custom-masonry layout="50-50">
-          {% set itemList = collections.allPosts %}
-					{% asyncEach item in itemList.slice(0, 4) %}
-            {% set headingLevel = "h3" %}
-						{% include "partials/card-blog.njk" %}
-					{% endeach %}
-        </custom-masonry>
-      </div>
-    </div>
-  </section>
+  <div class="spenden-button">Jetzt<br>spenden!</div>
 </div>

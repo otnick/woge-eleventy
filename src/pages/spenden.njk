@@ -1,0 +1,193 @@
+---
+layout: base
+title: Spenden
+permalink: /spenden/index.html
+description: "Ihre Spende hilft – WOGE e.V."
+---
+
+<style>
+  /* Header wie auf der Startseite */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .site-info{ display:flex; flex-direction:column; gap:.3rem; }
+  .site-info img{ width:220px; height:auto; }
+  .site-info p{ margin:0; }
+  .address-header{ color:var(--color-primary); }
+  .site-info .address{ color:var(--color-primary); font-weight:500; }
+
+  /* NEU: Wrapper, damit Headline + Subhead direkt untereinander stehen */
+  .headline-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* horizontal mittig */
+    justify-content: center;   /* vertikal mittig */
+    text-align: center;        /* Text mittig statt rechtsbündig */
+    min-height: 220px;         /* sorgt für Raum zum Zentrieren */
+    transform: translateY(1rem); /* leicht nach unten schieben */
+  }
+
+  @media (min-width: 64rem) {
+    .headline-wrap {
+      transform: translateY(2rem); /* auf großen Screens etwas tiefer */
+    }
+  }
+
+  .headline {
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    color: var(--color-primary);
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  .subhead {
+    margin: 0.5rem 0 0 0;
+    color: var(--color-secondary);
+    font-weight: 600;
+  }
+
+  /* Layout wie im Screenshot: linke Textspalte, rechte feste Karte */
+  .spenden-grid{
+    display:grid; gap:clamp(1rem, 3vw, 2rem);
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 56rem){
+    .spenden-grid{
+      grid-template-columns: 1fr 340px; /* feste Kartenbreite rechts */
+      align-items:start;
+    }
+  }
+
+  .donation-card{
+    width:100%;
+    border:1px solid var(--color-border,#e5e7eb);
+    border-radius:16px;
+    padding:clamp(1rem,2.2vw,1.25rem);
+    box-shadow:0 4px 20px rgb(0 0 0 / 6%);
+    background:var(--color-surface,#fff);
+  }
+  .donation-card h2{
+    margin:0 0 .25rem 0;
+    font-size:2rem; color:var(--color-primary);
+  }
+  .donation-card p{ margin:.25rem 0 .75rem 0; }
+
+  /* FIX: konstante dt-Spaltenbreite, schöne Umbrüche */
+  .donation-card dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* nur eine Spalte */
+  gap: .5rem 0;
+  line-height: 1.25;
+}
+
+.donation-card dt {
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+}
+
+.donation-card dd {
+  margin: 0 0 0.4rem 0; /* etwas Abstand nach unten */
+  font-weight: 600;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+  .spenden-hero p{ margin:.25rem 0 1rem 0; max-width:65ch; }
+
+  .cta-row{ display:flex; gap:.75rem; flex-wrap:wrap; align-items:center; }
+  .btn{ display:inline-block; padding:.7rem 1rem; border-radius:.75rem; text-decoration:none; font-weight:700; border:2px solid var(--color-primary); }
+  .btn-primary{ background:var(--color-primary); color:#fff; }
+  .btn-ghost{ color:var(--color-primary); background:transparent; }
+
+  .wave{ height:10px; background:radial-gradient(12px 6px at 12px 6px, var(--color-primary) 98%, transparent 100%) 0 0/24px 12px repeat-x; opacity:.15; margin:1rem 0; }
+
+  /* QR Platzhalter */
+  .qr{ margin-top:.75rem; display:grid; place-items:center; gap:.5rem; }
+  .qr .placeholder{
+    width:140px; aspect-ratio:1/1; border:2px dashed #cbd5e1; border-radius:.5rem;
+    display:grid; place-items:center; font-size:.8rem; color:#64748b;
+    background:
+      linear-gradient(90deg, transparent 0 48%, #e2e8f0 48% 52%, transparent 52% 100%),
+      linear-gradient(transparent 0 48%, #e2e8f0 48% 52%, transparent 52% 100%);
+    background-size:16px 2px, 2px 16px; background-repeat:repeat;
+  }
+
+  .spenden-button{
+    position:fixed; right:3rem; bottom:2rem;
+    background-color:#fbbf24; color:white; font-weight:bold; border-radius:50%;
+    width:120px; height:120px; display:flex; align-items:center; justify-content:center;
+    text-transform:uppercase; text-align:center; line-height:1.1; font-size:.9rem;
+  }
+
+  .iban{ letter-spacing:.03em; }
+</style>
+
+<div class="wrapper">
+
+  <header class="header">
+    <div class="site-info">
+      <img src="{{ '/assets/svg/woge_logo.svg' }}" alt="WOGE e.V. Logo">
+      <p class="address-header"><strong>WOGE e.V.</strong></p>
+      <p class="address">Gastfeldstr. 26g<br>28201 Bremen</p>
+    </div>
+
+    <!-- NEU: Headline + Subhead untereinander -->
+    <div class="headline-wrap">
+      <h1 class="headline">Ihre Spende hilft!</h1>
+      <p class="subhead">Jeder Beitrag wird zum großen Ganzen.</p>
+    </div>
+  </header>
+
+  <div class="spenden-grid">
+
+    <!-- Linke Spalte -->
+    <section class="spenden-hero flow">
+      <p style="color: var(--color-primary);">
+        Helfen Sie dabei mitzuwirken, dass Menschen mit Demenz in unserer
+        Gesellschaft weiterhin ihren Platz haben und in Würde und mit Respekt am
+        Leben teilhaben können. <strong>Bis zuletzt.</strong>
+      </p>
+
+      <div class="wave" aria-hidden="true"></div>
+
+      <div class="flow">
+        <h2 style="color: var(--color-secondary);">Jetzt spenden</h2>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#spendenkonto">Jetzt spenden</a>
+          <a class="btn btn-ghost" href="/assets/docs/spendenbrief.pdf">Link zum Spendenbrief</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rechte Spalte: feste Karte im Kasten -->
+    <aside id="spendenkonto" class="donation-card">
+      <h2>Spendenkonto</h2>
+
+      <dl>
+        <dt>Bank</dt><dd>Die Sparkasse Bremen</dd>
+        <dt>Kontoinhaber</dt><dd>WOGE e.V.</dd>
+        <dt>IBAN</dt><dd class="iban">DE87 2905 0101 0008 9133 33</dd>
+        <dt>BIC</dt><dd>SBREDE22XXX</dd>
+        <dt>Verwendungszweck</dt><dd>Spende WOGE e.V.</dd>
+      </dl>
+
+      <div class="qr">
+        <div class="placeholder" aria-hidden="true">QR&nbsp;Platzhalter</div>
+        <small>Einfach den QR-Code mit dem Handy scannen…</small>
+      </div>
+    </aside>
+
+  </div>
+
+  <div class="wave" aria-hidden="true"></div>
+
+</div>

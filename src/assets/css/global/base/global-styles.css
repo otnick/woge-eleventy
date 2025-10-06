@@ -147,3 +147,19 @@ a:not([class]):hover {
     display: none;
   }
 }
+
+nav {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  nav a {
+    color: var(--color-primary);
+    text-decoration: none;
+    margin: 0 0.6rem;
+    font-weight: 600;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
